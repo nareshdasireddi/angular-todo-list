@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let todo of todoData; let i = index">
+    <span [ngClass]="{ done: todo.markedAsDone }"> {{ todo.todoText }}</span>
+    <span *ngIf="access">
+      <button (click)="markingAsDone(i)">Done</button>
+      <button (click)="deletingTodo(i)">Delete</button>
+    </span>
+  </li>
+</ul>

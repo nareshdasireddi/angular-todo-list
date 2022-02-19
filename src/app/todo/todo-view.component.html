@@ -1,0 +1,8 @@
+<app-add-todo (addItem)="addTodo($event)"></app-add-todo>
+<app-list-todo
+  [access]="true"
+  [todoData]="todos"
+  (deleteItem)="deleteTodo($event)"
+  (markAsDone)="doneTodo($event)"
+>
+</app-list-todo>
